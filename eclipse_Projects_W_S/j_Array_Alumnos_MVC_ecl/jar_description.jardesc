@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="WINDOWS-1252" standalone="no"?>
+<jardesc>
+    <jar path="j_Array_Alumnos_MVC_ecl/dist/j_Array_Alumnos_mvc_ecl.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/j_Array_Alumnos_MVC_ecl/jar_description.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="true" mainClassHandleIdentifier="=j_Array_Alumnos_MVC_ecl/src&lt;main{CMain.java[CMain" manifestLocation="/j_Array_Alumnos_MVC_ecl/jar_manifest.xml" manifestVersion="1.0" reuseManifest="false" saveManifest="true" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+        <file path="/j_Array_Alumnos_MVC_ecl/.project"/>
+        <file path="/j_Array_Alumnos_MVC_ecl/.classpath"/>
+        <javaElement handleIdentifier="=j_Array_Alumnos_MVC_ecl/src"/>
+    </selectedElements>
+</jardesc>

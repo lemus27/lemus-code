@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+
+    <layout:CVista_Presentacion_Al_Bg title="Formulario Entidad Alumnos" maximized="true"
+    xmlns:bxml="http://pivot.apache.org/bxml"
+    xmlns:layout="vista"
+    xmlns="org.apache.pivot.wtk">
+    <content >
+    <Border>
+   
+     <BoxPane styles="{padding:4, horizontalAlignment:'center',verticalAlignment:'center'}"> 
+     
+        <Form>
+      
+                    <Form.Section heading="Formulario">
+                        
+                        <BoxPane bxml:id="nameBoxPane">
+                          <Label bxml:id="sourceLabel" text="No.Control:" styles="{font:{italic:true}}"/>
+                          <TextInput  bxml:id="NocontrolBxml"  prompt="Tipo Int"/>
+                        </BoxPane>
+
+                        <BoxPane bxml:id="nameBoxPane2">
+                          <Label bxml:id="sourceLabe2" text="Nombre: " styles="{font:{italic:true}}"/>
+                          <TextInput  bxml:id="NombreBxml"  prompt="Tipo String"/>  
+                        </BoxPane>
+                        
+                        <BoxPane bxml:id="nameBoxPane3">
+                            <Label bxml:id="sourceLabe3" text="Carrera: " styles="{font:{italic:true}}"/>
+                            <TextInput  bxml:id="CarreraBxml"  prompt="Tipo String"/>
+                         </BoxPane>
+                         
+                         <BoxPane bxml:id="nameBoxPane4">
+                            <Label bxml:id="sourceLabe4" text="Semestre: " styles="{font:{italic:true}}"/>
+                            <TextInput  bxml:id="SemestreBxml"  prompt="Tipo int"/>
+                            <Label bxml:id="sourceLabe5" text="Generacion: " styles="{font:{italic:true}}"/>
+                            <TextInput  bxml:id="GeneracionBxml"  prompt="Tipo Int"/>
+                         </BoxPane>
+                          
+                    </Form.Section>
+                    <Form.Section heading="">
+                        
+                        
+                        
+                        
+           <BoxPane styles="{padding:4, verticalAlignment:'center'}">              
+     <ScrollPane>
+            <view>
+              
+              
+               <TableView bxml:id="laTabla">
+                  <columns>
+                     <TableView.Column name="nocontrol" width="180"
+                        headerData="No. Control" />
+                     <TableView.Column name="nombre" width="60"
+                        headerData="Nombre" />
+                        
+                        
+                         <TableView.Column name="carrera" width="60"
+                        headerData="Carrera" />
+                        
+                        
+                         <TableView.Column name="semestre" width="60"
+                        headerData="Semestre" />
+                        
+                         <TableView.Column name="generacion" width="60"
+                        headerData="Generacion" />
+                        
+                        
+                  </columns>
+               </TableView>
+            </view>
+            <columnHeader>
+               <TableViewHeader tableView="$laTabla" />
+            </columnHeader>
+         </ScrollPane>
+         </BoxPane>    
+                        
+                        
+                        
+                        
+               
+                    </Form.Section>
+                    
+                    
+                    
+                    
+                    
+                    <Form.Section heading="">
+                     <BoxPane styles="{verticalAlignment:'center'}">
+                            <Label bxml:id="errorLabel" styles="{color:22}"/>
+                        </BoxPane>
+                        <BoxPane bxml:id="idBPBoton"  styles="{horizontalAlignment:'center',verticalAlignment:'center'}">
+                            <PushButton bxml:id="BotonAgregar" buttonData="Agregar"/>
+                            <PushButton bxml:id="BotonBorrar" buttonData="Borrar"/>
+                            <PushButton bxml:id="BotonBuscar" buttonData="Buscar"/>
+                            <PushButton bxml:id="BotonModificar" buttonData="Modificar"/>
+                            
+                        </BoxPane>
+		
+                    </Form.Section>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+         </Form>
+            </BoxPane>
+            </Border>
+    </content>
+</layout:CVista_Presentacion_Al_Bg>

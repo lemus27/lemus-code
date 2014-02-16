@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="C:/Users/mike/Downloads/Dropbox/its/TopicosSelectosProgramacionJava/apachePivotLearning/lib/pivot-charts-2.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mike/Downloads/Dropbox/its/TopicosSelectosProgramacionJava/apachePivotLearning/lib/pivot-charts-2.0.1.signed.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mike/Downloads/Dropbox/its/TopicosSelectosProgramacionJava/apachePivotLearning/lib/pivot-core-2.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mike/Downloads/Dropbox/its/TopicosSelectosProgramacionJava/apachePivotLearning/lib/pivot-core-2.0.1.signed.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mike/Downloads/Dropbox/its/TopicosSelectosProgramacionJava/apachePivotLearning/lib/pivot-tutorials-2.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mike/Downloads/Dropbox/its/TopicosSelectosProgramacionJava/apachePivotLearning/lib/pivot-tutorials-2.0.1.signed.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mike/Downloads/Dropbox/its/TopicosSelectosProgramacionJava/apachePivotLearning/lib/pivot-web-2.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mike/Downloads/Dropbox/its/TopicosSelectosProgramacionJava/apachePivotLearning/lib/pivot-web-2.0.1.signed.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mike/Downloads/Dropbox/its/TopicosSelectosProgramacionJava/apachePivotLearning/lib/pivot-web-server-2.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mike/Downloads/Dropbox/its/TopicosSelectosProgramacionJava/apachePivotLearning/lib/pivot-wtk-2.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mike/Downloads/Dropbox/its/TopicosSelectosProgramacionJava/apachePivotLearning/lib/pivot-wtk-2.0.1.signed.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mike/Downloads/Dropbox/its/TopicosSelectosProgramacionJava/apachePivotLearning/lib/pivot-wtk-terra-2.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mike/Downloads/Dropbox/its/TopicosSelectosProgramacionJava/apachePivotLearning/lib/pivot-wtk-terra-2.0.1.signed.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mike/Downloads/Dropbox/its/TopicosSelectosProgramacionJava/apachePivotLearning/lib/svgSalamander-tiny.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mike/Downloads/Dropbox/its/TopicosSelectosProgramacionJava/apachePivotLearning/lib/svgSalamander-tiny.signed.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

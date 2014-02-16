@@ -1,0 +1,95 @@
+<layout:CVista_Presentacion title="Datos de los Profesores   ITSPV " maximized="true"
+    xmlns:bxml="http://pivot.apache.org/bxml"
+    xmlns:layout="vista_ex"
+    xmlns="org.apache.pivot.wtk">
+    <Border styles="{padding:6}">
+        <TablePane>
+            <columns>
+                <TablePane.Column width="1*"/>
+            </columns>
+ 
+         <TablePane.Row height="1*">
+        <Form>
+          <Form.Section heading="Nombre completo">
+                   <BoxPane bxml:id="nameBoxPane" Form.label="Datos">
+                        <TextInput bxml:id="NombreTextInput" prompt= "Nombres y Apeidos" textSize="30"/>
+                         </BoxPane>
+                         </Form.Section>
+                    
+                 <Form.Section heading="Solo Numeros">
+                       <BoxPane  Form.label="Clave" orientation="vertical">
+                            <TextInput bxml:id="ClaveTextInput" prompt="ejem numero control" textSize="10"/>
+                        </BoxPane>
+                   </Form.Section>
+                   
+                <Form.Section heading="Domicilio Actual">
+                      <BoxPane Form.label="Domicilio Actual" orientation="vertical">
+                           <TextInput  bxml:id="DomicilioTextInput" prompt="Incluya Ciudad y Estado" textSize="35"/>
+                       </BoxPane>
+                 </Form.Section>
+                 
+                  <Form.Section heading="Numeros de Telefono">
+                        <BoxPane Form.label="Casa o cell" orientation="vertical">
+                        <TextInput  bxml:id="TelefonoTextInput" prompt="casa o cell sin lada" textSize="10"/>
+                       </BoxPane>
+                        </Form.Section>
+                        
+                 <Form.Section heading="Correo Electronico">
+                   <BoxPane Form.label="Correo" orientation="vertical">
+                      <TextInput bxml:id="CorreoTextInput" prompt="Gmail" textSize="20" />
+                      </BoxPane>
+                   </Form.Section>
+                   
+                 <Form.Section heading="Listado">        
+               <ScrollPane>     
+                   <TableView bxml:id="tableView"> 
+                   
+                      <columns>
+                           <TableView.Column name="nombre" width="180" headerData="Nombre"/>
+                           <TableView.Column name="clave" width="60" headerData="Clave"/>
+                           <TableView.Column name="domicilio" width="180" headerData="Domicilio"/> 
+                          <TableView.Column name="telefono" width="60" headerData="Telefono"/> 
+                          <TableView.Column name="correo" width="120" headerData="Correo"/>  
+                          </columns>
+                      
+                     </TableView>
+                   <columnHeader>       
+                      <TableViewHeader tableView="$tableView"/>    
+                    </columnHeader> 
+                  </ScrollPane> 
+                </Form.Section>          
+                </Form>
+            </TablePane.Row>
+           <TablePane.Row height="-1">
+                <Separator/>
+            </TablePane.Row>
+              <TablePane.Row height="-1">
+                <TablePane>
+                    <columns>
+                        <TablePane.Column width="1*"/>
+                        <TablePane.Column width="-1"/>
+                    </columns>
+                  <TablePane.Row>
+                        <BoxPane styles="{verticalAlignment:'center'}">
+                            <Label bxml:id="errorLabel" styles="{color:22}"/>
+                        </BoxPane>
+                        
+                        <BoxPane styles="{horizontalAlignment:'center', verticalAlignment:'center'}">
+                            <PushButton bxml:id="createButton" buttonData="Create"
+                                styles="{minimumAspectRatio:5}"/>
+                                <PushButton bxml:id="readButton" buttonData="Read"
+                                styles="{minimumAspectRatio:5}"/>
+                                <PushButton bxml:id="updateButton" buttonData="Update"
+                                styles="{minimumAspectRatio:5}"/>
+                                <PushButton bxml:id="deleteButton" buttonData="Delete"
+                                styles="{minimumAspectRatio:5}"/>
+                                <PushButton bxml:id="findButton" buttonData="Find"
+                                styles="{minimumAspectRatio:5}"/>
+                        </BoxPane>
+                        
+                    </TablePane.Row>
+                </TablePane>
+            </TablePane.Row>
+        </TablePane>
+    </Border>
+</layout:CVista_Presentacion>
