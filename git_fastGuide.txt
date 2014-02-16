@@ -1,0 +1,20 @@
+guia  rapida de uso de git
+.-para crear un reposiorio nuevo 
+$ git init   /*iniciar un nuevo repositorio*/
+$ git add .  /*agrear el directorio actual pra ser manejado por git*/
+$ git commit -m "My first backup"   /*haciendo un commit loca, -m:es par poner el mensaje del commit*/
+
+.-para realizar un commit de  todos los archivos manejados por git en el repositorio
+
+$ git commit -a -m "mensaje" /* -a:indicar que  todos los  archivos; -m: mensaje */
+
+.- para crear una nueva  rama
+$ git branch nombre_Rama  /*nombre_Rama:esel nombre de la nueva  rama*/
+
+.-para cambiar y trabajar  con otra  rama  diferente a la  actual
+
+$ git checkout nombre_rama /*nombre_Rama: indica el nombre de la rama*/
+
+.- para  subir  los  cambios  de  mi   repositorio local a mi  repositorio global
+
+  $git push git@github.com:cuenta/repositorio.git      /*cuenta:indica  el usuario de  acceso a la cuenta  en github; repositorio.git:indica el nombre del repositorio  global  con que se  esta  trabajando*/
