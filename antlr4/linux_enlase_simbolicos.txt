@@ -1,0 +1,78 @@
+ Manejo de enlaces simbólicos en Linux
+
+uso de enlaces simbólicos desde la terminal de ubuntuCon este post me gustaría iniciar una serie de artículos cuyo objetivo no es otro que ofrecer a los lectores una serie de herramientas básicas (de ahí que como imagen haya optado por colocar una caja de herramientas que volveré a utilizar para destacar estos artículos añadiéndoles alguna otra que haga alusión al tema que vaya a tratarse) para el manejo de Linux.
+
+En esta primera entrega me gustaría centrarme en el uso de los enlaces simbólicos que, aunque simples una vez comprendido su funcionamiento, son de extrema utilidad al gestionar nuestro sistema de archivos.
+
+Definición de enlace simbólico
+
+Lo primero sería explicar qué es un enlace simbólico pero, como no quiero aburriros con los detalles lo mejor será incluir un enlace donde poder consultarlo.
+
+Como más de uno se habrá quedado igual añadiré que podrían verse (con ciertas diferencias) como los accesos directos del “ventanuco“ o lo que es lo mismo: la posibilidad de colocar en cualquier sitio un directorio (o fichero) que realmente se encuentra ubicado en otro lugar.
+Si sientes adversión por la terminal prueba con el post “Crear enlaces simbólicos gráficamente“
+Tipos y creación de enlaces
+Enlaces simbólicos
+
+Son los enlaces que suelen utilizarse habitualmente de ahí que incluso suela denominarse, por defecto, enlace simbólico a cualquier enlace que se cree.
+
+Cualquier cambio que se haga tanto en el directorio original como en el contenido del enlace simbólico quedará reflejado en el otro (si cambias el contenido del enlace simbólico se podrá ver en el original y viceversa)
+
+Borrar el enlace simbólico no afecta al original (seguirá existiendo)
+
+Para crear un enlace simbólico lanzaremos el siguiente comando desde la terminal
+
+    ln -s DIRECTORIO_ORIGINAL DIRECTORIO_ENLACE
+
+Donde
+
+    DIRECTORIO_ORIGINAL es el directorio al que queremos apuntar
+    DIRECTORIO_ENLACE es donde queremos poner el enlace al DIRECTORIO_ORIGINAL
+
+Sirva de ejemplo la siguiente sentencia
+
+    ln -s $HOME/www /opt/joomla1.5.1/joomla-1.5.2-0/apache2/htdocs/
+
+Donde
+
+    /opt/joomla1.5.1/joomla-1.5.2-0/apache2/htdocs/ es la ruta al directorio en el que se encuentran los archivos del servidor web que tengo montado en mi equipo con el stack de Bitnami
+    $HOME es mi directorio de usuario
+    www es un directorio que me he creado en mi carpeta de usuario
+
+Con ese enlace simbólico consigo tener todos los proyectos web que voy creando en mi equipo dentro de mi carpeta de usuario.
+
+La idea es que si algún día cambio de distribución Linux no perder ese trabajo por un despiste: toda mi documentación y proyectos están en mi directorio de usuario ($HOME) así no tengo que recordar que dentro del sistema de ficheros de Linux tengo cosas que me podrían hacer falta
+
+TRUCO Para recordar el parámetro -s asociar la palabra SOFT o SIMBÓLICO seguro que así no se te olvida ;)
+Enlaces duros
+
+Igual que el simbólico pero con un matiz: cuando se borre el último enlace que apunte al DIRECTORIO_ORIGINAL (se pueden crear tantos enlaces como se necesiten a un directorio cualquiera de nuestro sistema de archivos) se borrará el DIRECTORIO_ORIGINAL
+
+La sintaxis es la misma cambiando única y exclusivamente el parámetro por -t; sirva de ejemplo
+
+    ln -t $HOME/www /opt/joomla1.5.1/joomla-1.5.2-0/apache2/htdocs/
+
+Identificar enlaces simbólicos
+
+Desde el administrador de archivos pueden identificarse fácilmente por contar con una flecha en la parte inferior del icono de carpeta
+
+Desde la terminal (lanzando un ls -l para que muestre información adicional) veremos que en el bit de tipo en lugar de aparecer una d (de Directorio) aparece una l (de Link)
+
+Ya que estamos con la terminal y recordando el aviso que hicimos sobre los enlaces duros (al borrar el último se borra el DIRECTORIO_ORIGINAL) comentar que para saber cuántos enlaces DUROS apuntan al directorio original basta con mirar el número que hay justo a la derecha de los permisos (en el ejemplo es un 1 porque sólo hay un enlace duro al DIRECTORIO_ORIGINAL)
+
+Eliminar enlaces
+
+Tan sencillo como ejecutar el comando unlink
+
+    unlink RUTA_AL_ENLACE_NO_DESEADO
+
+Donde
+
+    RUTA_AL_ENLACE_NO_DESEADO es la ruta a alguno de los enlaces que hemos creado y han dejado de sernos útiles
+
+Conclusión
+
+Espero que este tocho os haya servido para entender algo mejor el funcionamiento y utilidad de los enlaces simbólicos; utilidades todas las que se os puedan ocurrir (recordad el ejemplo para ubicar los proyectos webs en el directorio de usuario y evitar que se pierda con alguna instalación desde cero)
+Podría interesarte
+
+    Crear enlaces simbólicos gráficamente en Linux
+

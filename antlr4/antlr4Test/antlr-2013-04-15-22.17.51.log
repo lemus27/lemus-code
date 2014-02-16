@@ -1,0 +1,27 @@
+2013-04-15 22:17:50:234 grammar LogManager.java:49 before: (COMBINED_GRAMMAR MicroCalc (RULES (RULE expresion (BLOCK (ALT expSuma))) (RULE expSuma (BLOCK (ALT expResta (* (BLOCK (ALT OP_MAS expResta)))))) (RULE expResta (BLOCK (ALT expProducto (* (BLOCK (ALT OP_MENOS expProducto)))))) (RULE expProducto (BLOCK (ALT expCociente (* (BLOCK (ALT OP_PRODUCTO expCociente)))))) (RULE expCociente (BLOCK (ALT expBase (* (BLOCK (ALT OP_COCIENTE expBase)))))) (RULE expBase (BLOCK (ALT NUMERO) (ALT PARENT_AB expresion PARENT_CE))) (RULE BLANCO (BLOCK (LEXER_ALT_ACTION (ALT (BLOCK (ALT ' ') (ALT '\t'))) skip))) (RULE OP_MAS (BLOCK (ALT '+'))) (RULE OP_MENOS (BLOCK (ALT '-'))) (RULE OP_PRODUCTO (BLOCK (ALT '*'))) (RULE OP_COCIENTE (BLOCK (ALT '/'))) (RULE PARENT_AB (BLOCK (ALT '('))) (RULE PARENT_CE (BLOCK (ALT ')'))) (RULE NUMERO (BLOCK (ALT (+ (BLOCK (ALT (.. '0' '9')))) (? (BLOCK (ALT '.' (+ (BLOCK (ALT (.. '0' '9'))))))))))))
+2013-04-15 22:17:50:296 grammar LogManager.java:49 after: (COMBINED_GRAMMAR MicroCalc (RULES (RULE expresion (BLOCK (ALT expSuma))) (RULE expSuma (BLOCK (ALT expResta (* (BLOCK (ALT OP_MAS expResta)))))) (RULE expResta (BLOCK (ALT expProducto (* (BLOCK (ALT OP_MENOS expProducto)))))) (RULE expProducto (BLOCK (ALT expCociente (* (BLOCK (ALT OP_PRODUCTO expCociente)))))) (RULE expCociente (BLOCK (ALT expBase (* (BLOCK (ALT OP_COCIENTE expBase)))))) (RULE expBase (BLOCK (ALT NUMERO) (ALT PARENT_AB expresion PARENT_CE))) (RULE BLANCO (BLOCK (LEXER_ALT_ACTION (ALT (SET ' ' '\t')) skip))) (RULE OP_MAS (BLOCK (ALT '+'))) (RULE OP_MENOS (BLOCK (ALT '-'))) (RULE OP_PRODUCTO (BLOCK (ALT '*'))) (RULE OP_COCIENTE (BLOCK (ALT '/'))) (RULE PARENT_AB (BLOCK (ALT '('))) (RULE PARENT_CE (BLOCK (ALT ')'))) (RULE NUMERO (BLOCK (ALT (+ (BLOCK (ALT (.. '0' '9')))) (? (BLOCK (ALT '.' (+ (BLOCK (ALT (.. '0' '9'))))))))))))
+2013-04-15 22:17:50:390 grammar LogManager.java:49 after extract implicit lexer =(COMBINED_GRAMMAR MicroCalc (RULES (RULE expresion (BLOCK (ALT expSuma))) (RULE expSuma (BLOCK (ALT expResta (* (BLOCK (ALT OP_MAS expResta)))))) (RULE expResta (BLOCK (ALT expProducto (* (BLOCK (ALT OP_MENOS expProducto)))))) (RULE expProducto (BLOCK (ALT expCociente (* (BLOCK (ALT OP_PRODUCTO expCociente)))))) (RULE expCociente (BLOCK (ALT expBase (* (BLOCK (ALT OP_COCIENTE expBase)))))) (RULE expBase (BLOCK (ALT NUMERO) (ALT PARENT_AB expresion PARENT_CE)))))
+2013-04-15 22:17:50:390 grammar LogManager.java:49 lexer =(LEXER_GRAMMAR MicroCalcLexer (RULES (RULE BLANCO (BLOCK (LEXER_ALT_ACTION (ALT (SET ' ' '\t')) skip))) (RULE OP_MAS (BLOCK (ALT '+'))) (RULE OP_MENOS (BLOCK (ALT '-'))) (RULE OP_PRODUCTO (BLOCK (ALT '*'))) (RULE OP_COCIENTE (BLOCK (ALT '/'))) (RULE PARENT_AB (BLOCK (ALT '('))) (RULE PARENT_CE (BLOCK (ALT ')'))) (RULE NUMERO (BLOCK (ALT (+ (BLOCK (ALT (.. '0' '9')))) (? (BLOCK (ALT '.' (+ (BLOCK (ALT (.. '0' '9'))))))))))))
+2013-04-15 22:17:50:984 action-translator LogManager.java:49 translate skip(); 
+2013-04-15 22:17:51:062 semantics LogManager.java:49 tokens={EOF=-1, BLANCO=1, OP_MAS=2, OP_MENOS=3, OP_PRODUCTO=4, OP_COCIENTE=5, PARENT_AB=6, PARENT_CE=7, NUMERO=8}
+2013-04-15 22:17:51:062 semantics LogManager.java:49 strings={'+'=2, '-'=3, '*'=4, '/'=5, '('=6, ')'=7}
+2013-04-15 22:17:51:062 LL1 LogManager.java:49 
+DECISION 0 in rule expSuma
+2013-04-15 22:17:51:078 LL1 LogManager.java:49 look=[null, 2, 7]
+2013-04-15 22:17:51:078 LL1 LogManager.java:49 LL(1)? true
+2013-04-15 22:17:51:078 LL1 LogManager.java:49 
+DECISION 1 in rule expResta
+2013-04-15 22:17:51:078 LL1 LogManager.java:49 look=[null, 3, {2, 7}]
+2013-04-15 22:17:51:078 LL1 LogManager.java:49 LL(1)? true
+2013-04-15 22:17:51:078 LL1 LogManager.java:49 
+DECISION 2 in rule expProducto
+2013-04-15 22:17:51:078 LL1 LogManager.java:49 look=[null, 4, {2..3, 7}]
+2013-04-15 22:17:51:078 LL1 LogManager.java:49 LL(1)? true
+2013-04-15 22:17:51:078 LL1 LogManager.java:49 
+DECISION 3 in rule expCociente
+2013-04-15 22:17:51:078 LL1 LogManager.java:49 look=[null, 5, {2..4, 7}]
+2013-04-15 22:17:51:078 LL1 LogManager.java:49 LL(1)? true
+2013-04-15 22:17:51:078 LL1 LogManager.java:49 
+DECISION 4 in rule expBase
+2013-04-15 22:17:51:078 LL1 LogManager.java:49 look=[null, 8, 6]
+2013-04-15 22:17:51:078 LL1 LogManager.java:49 LL(1)? true
