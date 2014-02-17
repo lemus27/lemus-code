@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Window PUBLIC "-//MFF//DTD ECHO2 FORM 1.0//EN" "https://nbecho2support.dev.java.net/files/documents/6714/93992/echo2-form-1_0.dtd">
+<Window>
+
+	<Component class="org.netbeans.modules.web.echo2.tree.container.ContentPane">
+		<CodeProperties>
+			<Property name="Id" type="org.netbeans.modules.web.echo2.api.properties.JavaIdentifier">mainPane</Property>
+		</CodeProperties>
+		<EchoProperties>
+		</EchoProperties>
+		<DesignerProperties>
+			<Property name="posX" type="int">0</Property>
+			<Property name="posY" type="int">0</Property>
+			<Property name="width" type="int">500</Property>
+			<Property name="height" type="int">500</Property>
+			<Property name="containerPosition" type="int">0</Property>
+		</DesignerProperties>
+		<Events>
+		</Events>
+	</Component>
+</Window>

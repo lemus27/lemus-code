@@ -1,0 +1,17 @@
+***************
+*** 55,61 ****
+      public static ImageIcon createImageIcon(String filename) {
+          if (filename==null) return null;
+  
+-         String path = "images/" + filename;
+          URL u = JImageButton.class.getResource(path);
+          if (u==null) return null;
+  
+--- 55,61 ----
+      public static ImageIcon createImageIcon(String filename) {
+          if (filename==null) return null;
+  
++         String path = "images/" + filename; //$NON-NLS-1$
+          URL u = JImageButton.class.getResource(path);
+          if (u==null) return null;
+  

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    Document   : SGCookie
+    Created on : 05-abr-2011, 8:44:54
+    Author     : mike
+-->
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+
+    <jsp:directive.page contentType="text/html" pageEncoding="UTF-8"/>
+
+    <!-- any content can be specified here, e.g.: -->
+    <jsp:element name="text">
+        <jsp:attribute name="lang">EN</jsp:attribute>
+        <jsp:body>Hello World!</jsp:body>
+        <h1>Set Cookie With Java Applet</h1>
+<form name="myForm">
+Cookie name: <input
+    Type="text" value="foo" name="cookieName">
+</input>= value:
+<input Type="text" value="bar" name="cookieValue">
+
+</input>
+<input Type="button"
+       value="Set Cookie"
+       onClick="document.cookieApp.setCookie(document.myForm.cookieName.value,document.myForm.cookieValue.value)">
+</input>
+
+</form>
+<!-- The MAYSCRIPT attribute is required in order for the Java methods
+to be available to the JavaScript functions. -->
+        <jsp:plugin
+                 type="applet"
+                 codebase="classes"
+                 code="jappletdomhtml1/SGCookie.class"
+                 width="350"
+                 height="200"
+                 >
+        </jsp:plugin>
+    </jsp:element>
+
+</jsp:root>

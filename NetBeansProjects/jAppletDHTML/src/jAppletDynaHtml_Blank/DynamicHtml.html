@@ -1,0 +1,90 @@
+<HTML>
+<HEAD>
+   <TITLE>página HTML de Applet</TITLE>
+</HEAD>
+<BODY>
+
+<!--
+*** Lanzador applet generado HTML - NO EDITE LA CARPETA 'BUILD' ***
+
+Si necesita modificar el archivo lanzador HTML  (ejm.., para agregar parametros al applet), 
+copie este donde su clase del applet applet es encontrado en la carpeta SRC. Si haces esto, 
+el IDE puede ser usarlo cuando ejecuta o depurar el applet. 
+
+Tip: para excluir un lanzador HTML desde un archivo JAR, use los filtros de exclusión en  
+la página de paquetes en el cuadro de diálogo Propiedades del proyecto. 
+
+Para obtener más información consulte la ayuda en línea. 
+  -->
+
+<H3><HR WIDTH="100%">página HTML de Applet<HR WIDTH="100%"></H3>
+<SCRIPT>
+function createHTML(s) {
+alert("insideCreateHtml!");
+   win = window.open("ventana1","width=120,height=300,scrollbars=NO");
+   win.document.write(s);
+   win.document.close();
+   }
+   function openPage() {
+   alert("google!");
+	document.getURL("http://www.google.com","_blank");
+   }
+
+function ventanaSecundaria (URL){
+   window.open(URL,"ventana1","width=120,height=300,scrollbars=NO")
+}
+
+   var html='<HTML><HEAD></HEAD><BODY><TABLE BORDER=1><TR><TD>Hello world</TD></TR></TABLE></BODY></HTML>';
+</SCRIPT>
+<P>
+<APPLET codebase="classes" code="jappletdhtml/DynamicHtml.class" width=350 height=200></APPLET>
+</P>
+
+<HR WIDTH="100%"><FONT SIZE=-1><I>generado por el IDE NetBeans </I></FONT>
+<a href="javascript:createHTML(html)"> Enviar formulario</a> 
+
+<a href="javascript:openPage() "TARGET="_blank">openPage</a>
+<a href="javascript:ventanaSecundaria('http://www.desarrolloweb.com') "> VentanaSecundaria</a>
+<style type='text/css'> 
+
+.editorial { width: 30%;} 
+.item { list-style: none; list-style-position: inside; 
+        padding: 0.2ex; margin: 0.2ex; } 
+
+a { color: darkblue; text-decoration: none;} 
+div:hover a { color: blue; text-decoration: underline;} 
+
+.oculto ul { display: none; } 
+div:hover ul { display: block; }
+
+ul { border: transparent solid 0.1ex; } 
+ul:hover { border: peru solid 0.1ex; } 
+
+ul:hover abbr,
+ul:hover dfn { color: red; } 
+ 
+.vista { visibility: hidden; } 
+ul:hover .vista { visibility: visible; } 
+
+</style> 
+
+<div class='editorial oculto'> 
+   <h2> <a> CSS </a> </h2> 
+   <ul class='item'> 
+      <li> <dfn>CSS</dfn> es una c seguida de dos eses. </li> 
+      <li> También es un estándar del <abbr>W3C</abbr>. </li> 
+      <li class='vista'> No se me ocurre qué poner aquí. </li>
+   </ul> 
+   
+</div> 
+
+<div class='editorial'> 
+   <h2> <a> HTML </a> </h2> 
+   <ul class='item'> 
+      <li> <dfn>HTML</dfn> es un lenguaje para el marcado de hipertextos. </li> 
+      <li> Es un estándar del <abbr>W3C</abbr>. </li> 
+      <li class='vista'> Creado por Tim Berners-Lee. </li> 
+   </ul> 
+</div>  
+</BODY>
+</HTML>

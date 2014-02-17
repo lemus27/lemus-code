@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+
+    <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping" >
+       <property name="caseSensitive" value="true" />
+  </bean>
+    <!--
+    Most controllers will use the ControllerClassNameHandlerMapping above, but
+    for the index controller we are using ParameterizableViewController, so we must
+    define an explicit mapping for it.
+    -->
+   
+	 <!-- urls -->
+	
+       <bean id="carManager" class="springmvc.service.CarManager">
+       <property name="carList">
+         <list>
+            <ref bean="car1"/>
+            <ref bean="car2"/>
+        </list>
+        </property>
+    </bean>
+
+	<bean id="brandManager" class="springmvc.service.BrandManager">
+	  <property name="brandList">
+         <list>
+            <ref bean="brand1"/>
+            <ref bean="brand2"/>
+        </list>
+      </property>
+    </bean>
+
+    <bean id="brand1" class="springmvc.model.Brand">
+        <property name="id" value="1"/>
+        <property name="name" value="Mercedes"/>
+        <property name="country" value="Germany"/>
+    </bean>
+
+    <bean id="brand2" class="springmvc.model.Brand">
+        <property name="id" value="2"/>
+        <property name="name" value="Peugeot"/>
+        <property name="country" value="France"/>
+    </bean>
+
+    <bean id="car1" class="springmvc.model.Car">
+        <property name="id" value="1"/>
+        <property name="brand" ref="brand1"/>
+        <property name="model" value="SL 500"/>
+        <property name="price" value="40000"/>
+    </bean>
+
+    <bean id="car2" class="springmvc.model.Car">
+        <property name="id" value="2"/>
+        <property name="brand" ref="brand2"/>
+        <property name="model" value="607"/>
+        <property name="price" value="35000"/>
+    </bean>
+
+	 <!-- urls -->
+	<bean  class="springmvc.web.HelloWorldController"/>
+
+	<bean  class="springmvc.web.CarListController">
+		<property name="carManager" ref="carManager"/>
+	</bean>
+
+    <bean class="springmvc.web.CarNewController">
+        <property name="commandClass" value="springmvc.model.Car"/>
+        <property name="formView" value="carNew"/>
+        <property name="successView" value="carList.htm"/>
+		<property name="validator">
+        	<bean class="springmvc.validator.CarValidator"/>
+        </property>
+        <property name="carManager" ref="carManager"/>
+		<property name="brandManager" ref="brandManager"/>
+    </bean>
+	
+  
+
+
+
+    <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="index.htm">indexController</prop>
+            </props>
+        </property>
+    </bean>
+    
+    <bean id="viewResolver"
+          class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+          p:prefix="/WEB-INF/jsp/"
+          p:suffix=".jsp" />
+    
+    <!--
+    The index controller.
+    -->
+    <bean name="indexController"
+          class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="index" />
+    
+</beans>

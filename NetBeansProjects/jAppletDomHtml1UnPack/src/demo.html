@@ -1,0 +1,26 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Set Cookie With Java Applet</title>
+</head>
+<body>
+<h1>Set Cookie With Java Applet</h1>
+<form name="myForm">
+Cookie name: <input Type="text" value="foo" name="cookieName">
+= value: <input Type="text" value="bar" name="cookieValue">
+<input Type="button" 
+       value="Set Cookie"
+       onClick="document.cookieApp.setCookie(document.myForm.cookieName.value,document.myForm.cookieValue.value)">
+</form>
+<!-- The MAYSCRIPT attribute is required in order for the Java methods
+to be available to the JavaScript functions. -->
+<applet code="SGCookie.class"  WIDTH = 450 HEIGHT = 50  MAYSCRIPT>
+</applet>
+</body>
+</html>

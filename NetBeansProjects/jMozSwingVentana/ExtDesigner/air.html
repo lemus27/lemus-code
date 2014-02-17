@@ -1,0 +1,111 @@
+<html>
+	<head>
+        <title>Ext Designer Preview</title>
+        
+       	<script type="text/javascript" src="adobe/AIRAliases.js"></script>
+	
+		<script type="text/javascript" src="ext-3.0-dev/adapter/ext/ext-base.js"></script>
+    	<script type="text/javascript" src="ext-3.0-dev/ext-all.js"></script>
+	
+		<script type="text/javascript" src="ext-air/ext-air.js"></script>
+	
+        <script type="text/javascript">
+			Ext.state.Manager.setProvider(new Ext.air.FileProvider({
+				file: 'designer.state',
+				defaultState : {
+					mainWindow : {
+						width:1000,
+						height:750,
+						x:10,
+						y:10
+					}
+				}
+			}));
+			
+            
+			Ext.air.File = {
+			    browse: function(options, cb, scope){
+					options = options || {};
+					cb = cb || options.callback;
+					scope = scope || options.scope;
+			        var file = new air.File(options.path || air.File.documentsDirectory.nativePath);
+					var filter = null;
+					if(options.filter){
+						filter = new air.FileFilter(options.filterText || options.filter, options.filter);
+					}
+					file.addEventListener('select', function(e){
+						Ext.callback(cb, scope, [e.target.nativePath]);
+					});
+					if (filter) {
+						file.browseForOpen(options.text || 'Open', [filter]);
+					}else{
+						file.browseForOpen(options.text || 'Open');
+					}
+			    },
+				
+				save: function(options, cb, scope){
+					var stream = new air.FileStream();
+			        stream.open(options.fullPath, air.FileMode.WRITE);
+					stream.writeUTFBytes(options.contents);
+			        stream.close();
+			    },
+				
+				saveAs: function(options, cb, scope){
+					options = options || {};
+					cb = cb || options.callback;
+					scope = scope || options.scope;
+			        
+					var file = new air.File(
+						options.fullPath ? options.fullPath : 
+						((options.path || air.File.documentsDirectory.nativePath) + 
+						(options.name ? air.File.separator + options.name : ''))
+					);
+				
+					file.addEventListener('select', function(e){
+						var target = e.target;
+						var stream = new air.FileStream();
+				        stream.open(target, air.FileMode.WRITE);
+						stream.writeUTFBytes(options.contents);
+				        stream.close();
+						Ext.callback(cb, scope, [target]);
+					});
+					
+					file.browseForSave(options.text || 'Save As');
+			    },
+				
+				getContents: function(fileName){
+					var stream = new air.FileStream();
+					stream.open(new air.File(fileName), air.FileMode.READ);
+					var text = stream.readUTFBytes(stream.bytesAvailable);
+					stream.close();
+					return text;
+				}
+			};
+			
+			
+			// for this app
+			Ext.air.File.setTitle = function(title){
+				window.nativeWindow.title = 'Ext Designer - ' + title;
+			}
+            function initBridge(){
+				
+				document.getElementById('UI').contentWindow.parentSandboxBridge = Ext.air.File;
+				
+				var win = new Ext.air.NativeWindow({
+					id: 'mainWindow',
+					instance: window.nativeWindow
+				});
+				
+				win.instance.visible = true;
+			}
+        </script>
+	</head>
+	<frameset cols="100%" rows="100%">
+		<frame id="UI"
+            src="designer.html"
+            sandboxRoot="http://extjs.com/"
+            documentRoot="app:/" 
+			allowCrossDomainXHR="allowCrossDomainXHR"
+			ondominitialize="initBridge()" />
+	</frameset>
+</html>

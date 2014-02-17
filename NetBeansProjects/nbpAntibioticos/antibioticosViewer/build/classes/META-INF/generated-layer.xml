@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.2//EN"
+                            "http://www.netbeans.org/dtds/filesystem-1_2.dtd">
+<filesystem>
+    <folder name="xml">
+        <folder name="entities">
+            <folder name="org_mgl_ui">
+                <file name="antibioticos" url="nbres:/org/netbeans/modules/settings/resources/properties-1_0.dtd">
+                    <!--org.mgl.ui.antibioticosTopComponent-->
+                    <attr name="hint.originalPublicID" stringvalue="-//org.mgl.ui//antibioticos//EN"/>
+                </file>
+            </folder>
+        </folder>
+        <folder name="memory">
+            <folder name="org">
+                <folder name="mgl">
+                    <folder name="ui">
+                        <file name="antibioticosTopComponent">
+                            <!--org.mgl.ui.antibioticosTopComponent-->
+                            <attr name="settings.providerPath" stringvalue="xml/lookups//org_mgl_ui/antibioticos.instance"/>
+                        </file>
+                    </folder>
+                </folder>
+            </folder>
+        </folder>
+        <folder name="lookups">
+            <folder name="org_mgl_ui">
+                <file name="antibioticos.instance">
+                    <!--org.mgl.ui.antibioticosTopComponent-->
+                    <attr
+                        methodvalue="org.netbeans.api.settings.Factory.create" name="instanceCreate"/>
+                    <attr
+                        methodvalue="org.netbeans.api.settings.Factory.properties" name="settings.convertor"/>
+                    <attr name="settings.instanceClass" stringvalue="org.mgl.ui.antibioticosTopComponent"/>
+                    <attr name="settings.instanceOf" stringvalue="org.mgl.ui.antibioticosTopComponent"/>
+                    <attr boolvalue="true" name="xmlproperties.preventStoring"/>
+                </file>
+            </folder>
+        </folder>
+    </folder>
+</filesystem>

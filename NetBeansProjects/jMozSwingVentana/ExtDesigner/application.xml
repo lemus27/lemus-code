@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<application xmlns="http://ns.adobe.com/air/application/1.5">
+  	<name>Ext Designer Preview</name>
+ 	<id>com.extjs.designer</id>
+  	<version>1.0</version>
+  	<filename>Ext Designer Preview</filename>
+  	<description>Ext Designer Preview</description>
+  	<copyright>(c) 2009 - Ext JS, LLC</copyright>
+	<initialWindow>
+	   <title>Ext Designer Preview</title>
+	    <content>air.html</content>
+	    <systemChrome>standard</systemChrome>
+	    <transparent>false</transparent>
+	    <visible>false</visible>
+		<width>800</width>
+		<height>600</height>
+		<x>0</x>
+		<y>0</y>
+		<maximizable>true</maximizable>
+		<minimizable>true</minimizable>
+		<minSize>800 600</minSize>
+</initialWindow>
+	<installFolder>Ext Designer</installFolder>
+	<programMenuFolder>Ext Designer</programMenuFolder>
+	<icon>
+	  	<image16x16>ext-air/resources/icons/extlogo16.png</image16x16>
+		<image32x32>ext-air/resources/icons/extlogo32.png</image32x32>
+		<image48x48>ext-air/resources/icons/extlogo48.png</image48x48>
+		<image128x128>ext-air/resources/icons/extlogo128.png</image128x128>
+	</icon>
+	<fileTypes/>
+</application>

@@ -1,0 +1,9 @@
+las  bases  de  datos para derby, se deben alamcenar en  la carpeta databases de derby.
+
+los  reportes  deben almacenarse  fuera de los jar
+
+el empaquetado de  netbeans,  aplica  automaticamente, los  classpath  y  path   necesarios
+
+las bases de  datos  enbebidas de  derby  inician el servidor  derby
+
+para usar   bases de datos  no embebidas  primero debe  inciarse el servidor

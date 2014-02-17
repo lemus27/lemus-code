@@ -1,0 +1,5 @@
+C:\Archivos de programa\NetBeans 6.9.1\platform=1285802280330
+C:\Documents and Settings\Administrador\Mis documentos\NetBeansProjects\nbpAntibioticos\build\cluster=1286267462891
+C:\Archivos de programa\NetBeans 6.9.1\platform=1285802280330
+C:\Documents and Settings\Administrador\Mis documentos\NetBeansProjects\nbpAntibioticos\build\testuserdir=1286267462891
+crc=7

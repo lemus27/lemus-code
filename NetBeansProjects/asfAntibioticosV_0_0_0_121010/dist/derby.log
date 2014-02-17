@@ -1,0 +1,8 @@
+----------------------------------------------------------------
+2010-10-11 23:24:04.611 GMT:
+ Arrancando Derby versión The Apache Software Foundation - Apache Derby - 10.6.2.1 - (999685): instancia a816c00e-012b-9d9b-a1bc-000000597f50 
+en el directorio de base de datos C:\Documents and Settings\Administrador\Mis documentos\NetBeansProjects\asfAntibioticosV_0_0_0_121010\dist\antb  con el cargador de clases sun.misc.Launcher$AppClassLoader@11b86e7
+
+java.vendor=Sun Microsystems Inc.
+java.runtime.version=1.6.0_21-b07
+Cargador de clases de base de datos iniciado - derby.database.classpath=''

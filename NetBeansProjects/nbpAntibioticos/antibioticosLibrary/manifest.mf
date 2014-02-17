@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+OpenIDE-Module: org.mgl.antibioticos
+OpenIDE-Module-Localizing-Bundle: org/mgl/antibioticos/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+

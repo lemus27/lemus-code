@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.2//EN" "http://www.netbeans.org/dtds/filesystem-1_2.dtd">
+<filesystem>
+    <folder name="Actions">
+        <folder name="Window">
+            <file name="org-mgl-ui-antibioticosAction.instance">
+                <attr name="component" methodvalue="org.mgl.ui.antibioticosTopComponent.findInstance"/>
+                <attr name="displayName" bundlevalue="org.mgl.ui.Bundle#CTL_antibioticosAction"/>
+                <attr name="instanceCreate" methodvalue="org.openide.windows.TopComponent.openAction"/>
+            </file>
+        </folder>
+    </folder>
+    <folder name="Menu">
+        <folder name="Window">
+            <file name="antibioticosAction.shadow">
+                <attr name="originalFile" stringvalue="Actions/Window/org-mgl-ui-antibioticosAction.instance"/>
+            </file>
+        </folder>
+    </folder>
+    <folder name="Windows2">
+        <folder name="Components">
+            <file name="antibioticosTopComponent.settings" url="antibioticosTopComponentSettings.xml"/>
+        </folder>
+        <folder name="Modes">
+            <folder name="editor">
+                <file name="antibioticosTopComponent.wstcref" url="antibioticosTopComponentWstcref.xml"/>
+            </folder>
+        </folder>
+    </folder>
+</filesystem>

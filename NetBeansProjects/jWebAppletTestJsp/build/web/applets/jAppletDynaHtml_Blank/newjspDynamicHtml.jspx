@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    Document   : newjspDynamicHtml
+    Created on : 04-abr-2011, 23:06:56
+    Author     : mike
+-->
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+
+    <jsp:directive.page contentType="text/html" pageEncoding="UTF-8"/>
+
+    <!-- any content can be specified here, e.g.: -->
+    <jsp:element name="text">
+        <jsp:attribute name="lang">EN</jsp:attribute>
+        <jsp:body>Hello World!
+        <!--
+*** Lanzador applet generado HTML - NO EDITE LA CARPETA 'BUILD' ***
+
+Si necesita modificar el archivo lanzador HTML  (ejm.., para agregar parametros al applet),
+copie este donde su clase del applet applet es encontrado en la carpeta SRC. Si haces esto,
+el IDE puede ser usarlo cuando ejecuta o depurar el applet.
+
+Tip: para excluir un lanzador HTML desde un archivo JAR, use los filtros de exclusi�n en
+la p�gina de paquetes en el cuadro de di�logo Propiedades del proyecto.
+
+Para obtener m�s informaci�n consulte la ayuda en l�nea.
+  -->
+
+<H3>
+    <hr>
+    </hr>
+p�gina HTML de Applet
+<hr>  </hr>
+</H3>
+  <SCRIPT >
+function createHTML(s) {
+ alert("insideCreateHtml!");
+   win = window.open("ventana1");//si le ponemos otros parametros  crea una popup
+   win.document.write(s);
+   win.document.close();
+   }
+</SCRIPT>
+
+    
+
+
+<hr ></hr>
+<FONT SIZE="-1"><I>generado por el IDE NetBeans </I></FONT>
+<a href="javascript:createHTML(html)"> Enviar formulario</a>
+
+
+<style type='text/css'>
+
+.editorial { width: 30%;}
+.item { list-style: none; list-style-position: inside;
+        padding: 0.2ex; margin: 0.2ex; }
+
+a { color: darkblue; text-decoration: none;}
+div:hover a { color: blue; text-decoration: underline;}
+
+.oculto ul { display: none; }
+div:hover ul { display: block; }
+
+ul { border: transparent solid 0.1ex; }
+ul:hover { border: peru solid 0.1ex; }
+
+ul:hover abbr,
+ul:hover dfn { color: red; }
+
+.vista { visibility: hidden; }
+ul:hover .vista { visibility: visible; }
+
+</style>
+
+            <jsp:plugin
+                type="applet"
+                codebase="classes"
+                code="jappletdhtml/DynamicHtml.class"
+                width="350"
+                height="200">
+             </jsp:plugin>
+<div class='editorial oculto'>
+   <h2> <a> CSS </a> </h2>
+   <ul class='item'>
+      <li> <dfn>CSS</dfn> es una c seguida de dos eses. </li>
+      <li> Tambi�n es un est�ndar del <abbr>W3C</abbr>. </li>
+      <li class='vista'> No se me ocurre qu� poner aqu�. </li>
+   </ul>
+
+</div>
+
+<div class='editorial'>
+   <h2> <a> HTML </a> </h2>
+   <ul class='item'>
+      <li> <dfn>HTML</dfn> es un lenguaje para el marcado de hipertextos. </li>
+      <li> Es un est�ndar del <abbr>W3C</abbr>. </li>
+      <li class='vista'> Creado por Tim Berners-Lee. </li>
+   </ul>
+</div>
+        </jsp:body>
+    </jsp:element>
+
+</jsp:root>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="org.mgl.eclipselinkjavax">
+    <module_version install_time="1286267444454" last="true" origin="installer" specification_version="1.0">
+        <file crc="955293743" name="config/Modules/org-mgl-eclipselinkjavax.xml"/>
+        <file crc="3252765250" name="modules/ext/eclipselink-javax.persistence-2.0.jar"/>
+        <file crc="1252778431" name="modules/org-mgl-eclipselinkjavax.jar"/>
+    </module_version>
+</module>
